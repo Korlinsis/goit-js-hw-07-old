@@ -7,8 +7,16 @@ const ingredients = [
   'Приправы',
 ];
 
-for (let i = 0; i > ingredients.length; i += 1) {
+const liElements = [];
+
+for (let i = 0; i < ingredients.length; i += 1) {
+  
   const liElement = document.createElement('li');
-  liElement.textContent = `${ingredients[i]}`;
+  liElement.textContent = ingredients[i];
+
+  liElements.push(liElement);
 }
-console.log(liElement);
+
+const ulElement = document.querySelector('#ingredients');
+
+ulElement.append(...liElements);
